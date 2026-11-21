@@ -1,0 +1,140 @@
+{
+  "synthetic": true,
+  "encoding": "UTF-8",
+  "tables": {
+    "sessions": {
+      "count": 168,
+      "fields": [
+        "session_id",
+        "venue_id",
+        "date",
+        "capacity",
+        "release_at",
+        "protected_capacity",
+        "alpha",
+        "compensation_budget",
+        "compensation_per_person",
+        "status"
+      ],
+      "primary_key": [
+        "session_id"
+      ],
+      "sha256": "a691c780672d793cba33cb28a999ab670794b9e8abcedb39a2c34a7ee65f7606"
+    },
+    "bookings": {
+      "count": 1009,
+      "fields": [
+        "booking_id",
+        "session_id",
+        "party_id",
+        "participants",
+        "cancelled_count",
+        "revision",
+        "submitted_at",
+        "reservation_type",
+        "status",
+        "actual_count"
+      ],
+      "primary_key": [
+        "booking_id",
+        "revision"
+      ],
+      "sha256": "2299cc7446e9d3bc481f4d9247f92b1358b52effdaa10d61f997a50f3e66b5e0"
+    },
+    "waitlist": {
+      "count": 2,
+      "fields": [
+        "wait_id",
+        "session_id",
+        "party_id",
+        "participants",
+        "submitted_at"
+      ],
+      "primary_key": [
+        "wait_id"
+      ],
+      "sha256": "589fb8f322e98048634ff0caaa11450da7ebc57098584384b3976eb0b4860f0b"
+    },
+    "sales_controls": {
+      "count": 24,
+      "fields": [
+        "control_id",
+        "session_id",
+        "start_at",
+        "end_at",
+        "kind",
+        "remaining_offered"
+      ],
+      "primary_key": [
+        "control_id"
+      ],
+      "sha256": "b00f8b17d15f11368d922bb3269c5002fb8741d3f129f154b21fab2df2b621c5"
+    },
+    "enquiries": {
+      "count": 504,
+      "fields": [
+        "enquiry_id",
+        "session_id",
+        "party_size",
+        "at",
+        "accepted",
+        "reason"
+      ],
+      "primary_key": [
+        "enquiry_id"
+      ],
+      "sha256": "82d4129cdf018905f786ec6d46103ac02836b8b957de21a956a3a0ec306c5fca"
+    },
+    "policies": {
+      "count": 2,
+      "fields": [
+        "policy_id",
+        "venue_id",
+        "start",
+        "end",
+        "cancel_deadline_hours"
+      ],
+      "primary_key": [
+        "policy_id"
+      ],
+      "sha256": "283997d8f785ad5c9db47d2656c6175e65c5072905a0f6ad5207fabfedb8637e"
+    },
+    "scenarios": {
+      "count": 2,
+      "fields": [
+        "scenario_id",
+        "session_id",
+        "commercial_limit"
+      ],
+      "primary_key": [
+        "scenario_id"
+      ],
+      "sha256": "45f5d34eaabd157823d6d93e0d9625adc47ec4ddd1b31384e1a4c6d8582e3c27"
+    },
+    "decisions": {
+      "count": 1,
+      "fields": [
+        "decision_id",
+        "session_id",
+        "at",
+        "commercial_limit",
+        "policy_id"
+      ],
+      "primary_key": [
+        "decision_id"
+      ],
+      "sha256": "5e20f8ed4c4834010a5eef39cfcbc9c282992b1f52bd0ede7d6f4b7f62b3a814"
+    },
+    "observation_cutoffs": {
+      "count": 3,
+      "fields": [
+        "cutoff_id",
+        "at"
+      ],
+      "primary_key": [
+        "cutoff_id"
+      ],
+      "sha256": "d68d0393e06a11f13e71da399eaa4b960c9c2971a1b82ace38effe78f4aa8fe1"
+    }
+  }
+}
